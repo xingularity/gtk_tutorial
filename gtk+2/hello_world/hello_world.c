@@ -30,7 +30,8 @@ int main(int argc, char const *argv[]) {
 
     g_signal_connect(button, "clicked", G_CALLBACK(hello), NULL);
 
-    //Use g_signal_connect_swapped, the callback function will act on the data instead of the instance on the first parameter.
+    //Use g_signal_connect_swapped, the expected parameters of the callback function are swapped.
+    //The callback function should be like "void func(data, GtkWidget *widget)".
     //The follwing line will act gtk_widget_destroy on window instance.
     g_signal_connect_swapped(button, "clicked", G_CALLBACK(gtk_widget_destroy), window);
 
