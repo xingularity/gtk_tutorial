@@ -1,1 +1,1 @@
-[GTK tutorial](https://developer.gnome.org/gtk-tutorial/stable/x386.html)
+[GTK tutorial](https://developer.gnome.org/gtk-tutorial/2.90/x441.html)
