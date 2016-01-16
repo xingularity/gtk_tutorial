@@ -18,7 +18,7 @@ int main(int argc, char const *argv[]) {
 
     window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
-    gtk_window_set_title(GTK_WINDOW(window), "Hello with 2Buttons!");
+    gtk_window_set_title(GTK_WINDOW(window), "Hello with 2 Buttons!");
 
     g_signal_connect(window, "delete_event", G_CALLBACK(delete_event), NULL);
 
