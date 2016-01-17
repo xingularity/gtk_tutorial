@@ -22,14 +22,12 @@ int main(int argc, char const *argv[] )
     window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
     gtk_window_set_title(GTK_WINDOW(window), "Table");
-
     g_signal_connect(window, "delete-event", G_CALLBACK(delete_event), NULL);
 
     gtk_container_set_border_width(GTK_CONTAINER(window), 20);
 
     // create a table with 3x3
     table = gtk_table_new(3, 3, TRUE);
-
     gtk_container_add(GTK_CONTAINER(window), table);
 
     button = gtk_button_new_with_label("button 1");
@@ -56,9 +54,9 @@ int main(int argc, char const *argv[] )
     gtk_table_attach_defaults(GTK_TABLE(table), button, 1, 3, 1, 3);
 
     gtk_widget_show(button);
-    
+
     /* The above code intensionally let left lower quandrant empty. */
-    
+
     gtk_widget_show(table);
     gtk_widget_show(window);
 
