@@ -226,7 +226,6 @@ static void create_range_controls(void){
     gtk_widget_show(button);
 
     gtk_widget_show(window);
-
 }
 
 int main(int argc, char const *argv[] )
