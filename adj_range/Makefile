@@ -5,7 +5,7 @@ debug:
 	gcc -g adj_range.c -o adj_range `pkg-config --cflags --libs gtk+-2.0`
 
 gtk3:
-	gcc adj_range.c -o adj_range `pkg-config --cflags --libs gtk+-3.0`
+	gcc adj_range.c -o adj_range `pkg-config --cflags --libs gtk+-3.0` -DUSE_GTK3
 
 run:
 	./adj_range

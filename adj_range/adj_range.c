@@ -94,6 +94,7 @@ static void create_range_controls(void){
     gtk_widget_show(box3);
 
     hscale = gtk_hscale_new(GTK_ADJUSTMENT(adj1));
+    //https://developer.gnome.org/gtk3/stable/GtkWidget.html#gtk-widget-set-size-request
     gtk_widget_set_size_request(GTK_WIDGET(hscale), 200, -1);
     scale_set_default_values(GTK_SCALE(hscale));
     gtk_box_pack_start(GTK_BOX(box3), hscale, TRUE, TRUE, 0);
@@ -159,8 +160,10 @@ static void create_range_controls(void){
     item = make_menu_item("Discontinuous", G_CALLBACK(cb_update_menu_select), GINT_TO_POINTER(GTK_UPDATE_DISCONTINUOUS));
     gtk_menu_shell_append(GTK_MENU_SHELL(menu), item);
 
-    item = make_menu_item("Delayed", G_CALLBACK(cb_update_menu_select), GINT_TO_POINTER(GTK_UPDATE_DELAYED));
-    gtk_menu_shell_append(GTK_MENU_SHELL(menu), item);
+    #ifdef USE_GTK3
+        item = make_menu_item("Delayed", G_CALLBACK(cb_update_menu_select), GINT_TO_POINTER(GTK_UPDATE_DELAYED));
+        gtk_menu_shell_append(GTK_MENU_SHELL(menu), item);
+    #endif
 
     gtk_option_menu_set_menu(GTK_OPTION_MENU(opt), menu);
 
