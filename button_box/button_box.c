@@ -26,7 +26,7 @@ GtkWidget* create_bbox(gint horizontal, gchar* title, gint spacing, gint child_w
     
     button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
     gtk_container_add(GTK_CONTAINER(bbox), button);
-    
+
     button = gtk_button_new_from_stock(GTK_STOCK_HELP);
     gtk_container_add(GTK_CONTAINER(bbox), button);
     
